@@ -1,0 +1,694 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="为什么用hexo写博客首先说说为什么要用hexo写博客吧，博客可以对我们的学习成果做下整理总结，强化自己的学习，不做整理总结的学习过程，是一种不好的习惯，但是以前整理的时候，却没有动机，突然在某个网站上看到hexo博客界面的简洁性，深深吸引了我，没有任何花哨的内容，给人很清爽的感觉，我想起了很久以前，我想装扮我的qq空间之类的想法，但感觉qq空间装扮还是基于腾讯的模板，突然觉得hexo这个东西个性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo之环境搭建">
+<meta property="og:url" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/index.html">
+<meta property="og:site_name" content="思考人生">
+<meta property="og:description" content="为什么用hexo写博客首先说说为什么要用hexo写博客吧，博客可以对我们的学习成果做下整理总结，强化自己的学习，不做整理总结的学习过程，是一种不好的习惯，但是以前整理的时候，却没有动机，突然在某个网站上看到hexo博客界面的简洁性，深深吸引了我，没有任何花哨的内容，给人很清爽的感觉，我想起了很久以前，我想装扮我的qq空间之类的想法，但感觉qq空间装扮还是基于腾讯的模板，突然觉得hexo这个东西个性">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/2.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/3.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/4.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/软件安装/2.node/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/软件安装/3.hexo/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/创建公开项目.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/创建公开项目2.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/创建本地hexo项目.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/hexo%20g.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/public.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/结果.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/ssh2.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/ssh1.png">
+<meta property="og:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/仓库创建/ssh3.png">
+<meta property="og:updated_time" content="2017-06-13T15:04:10.217Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo之环境搭建">
+<meta name="twitter:description" content="为什么用hexo写博客首先说说为什么要用hexo写博客吧，博客可以对我们的学习成果做下整理总结，强化自己的学习，不做整理总结的学习过程，是一种不好的习惯，但是以前整理的时候，却没有动机，突然在某个网站上看到hexo博客界面的简洁性，深深吸引了我，没有任何花哨的内容，给人很清爽的感觉，我想起了很久以前，我想装扮我的qq空间之类的想法，但感觉qq空间装扮还是基于腾讯的模板，突然觉得hexo这个东西个性">
+<meta name="twitter:image" content="http://yoursite.com/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/12/Hexo之环境搭建/"/>
+
+
+
+
+
+  <title> Hexo之环境搭建 | 思考人生 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">思考人生</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Entities should not be multiplied unnecessarily</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/12/Hexo之环境搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhao Fuqiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思考人生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo之环境搭建
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-12T21:14:30+08:00">
+                2017-06-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="为什么用hexo写博客"><a href="#为什么用hexo写博客" class="headerlink" title="为什么用hexo写博客"></a>为什么用hexo写博客</h1><p>首先说说为什么要用hexo写博客吧，博客可以对我们的学习成果做下整理总结，强化自己的学习，不做整理总结的学习过程，是一种不好的习惯，但是以前整理的时候，却没有动机，突然在某个网站上看到hexo博客界面的简洁性，深深吸引了我，没有任何花哨的内容，给人很清爽的感觉，我想起了很久以前，我想装扮我的qq空间之类的想法，但感觉qq空间装扮还是基于腾讯的模板，突然觉得hexo这个东西个性化程度很高，因此，我决定用hexo写博客，把更多的知识通过网络分享给每个人，这也激发了我也博客的热情。</p>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h2><ul>
+<li><a href="http://pan.baidu.com/s/1pLdlZIV" target="_blank" rel="external">Git1.9.5下载</a>：<em>密码：zpij</em></li>
+<li><a href="http://pan.baidu.com/s/1geSCZj9" target="_blank" rel="external">Node-v0.12.5下载</a> <em>密码：7ttg</em>    </li>
+<li>hexo下载：安装完git后，直接在git bash中执行npm install hexo -g</li>
+<li><a href="http://www.so.com/link?url=http%3A%2F%2Fmarkdownpad.com%2Fdownload.html&amp;q=markdown下载&amp;ts=1497336248&amp;t=21b33b29c5657c45f29ad83785757e1&amp;src=haosou" target="_blank" rel="external">MarkdownPad2下载</a></li>
+</ul>
+<h2 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h2><p>安装在C盘即可（否则可能要配置环境变量什么的，我第一次没装到c盘，貌似有点问题）<br>双击“<em>Git-1.9.5-preview20150319.exe</em>”，出现以下界面：<br><img src="/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/1.png" alt=""><br>然后一路点击“next”,遇到下面这个界面，按照下图选项操作：<br><img src="/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/2.png" alt=""><br>遇到下面这个界面，选择“Use Git from the Windows Command Prompt”:<br><img src="/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/3.png" alt=""><br><figure class="highlight plain"><figcaption><span>[验证git是否安装成功]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git --version</div></pre></td></tr></table></figure><br>验证结果如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/软件安装/1.git/4.png" alt=""></p>
+<h2 id="node-js安装"><a href="#node-js安装" class="headerlink" title="node.js安装"></a>node.js安装</h2><p>node安装没有没有什么需要注意的，也是安装在c盘中，然后，一路点击“next”，就OK啦！<br>通过以下命令验证是否安装成功（在git Bash命令行下）：<br><figure class="highlight plain"><figcaption><span>[验证node.js是否安装成功]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure><br>验证结果如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/软件安装/2.node/1.png" alt=""></p>
+<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>下面是hexo安装啦！<br>很简单，打开“Git Bash”，输入以下命令：<br><figure class="highlight plain"><figcaption><span>[安装最新版本的hexo]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>[安装老版本的hexo]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+<p>通过以下命令验证是否安装成功（在git Bash命令行下）：<br><figure class="highlight plain"><figcaption><span>[验证hexo是否安装成功]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure></p>
+<p>验证结果如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/软件安装/3.hexo/1.png" alt=""></p>
+<h2 id="MarkdownPad2安装"><a href="#MarkdownPad2安装" class="headerlink" title="MarkdownPad2安装"></a>MarkdownPad2安装</h2><p>这个跟一般软件安装一样，自己搞定就行啦！！！</p>
+<p><em>PS：1.操作系统：win7+64位</em></p>
+<h1 id="创建远程和本地仓库"><a href="#创建远程和本地仓库" class="headerlink" title="创建远程和本地仓库"></a>创建远程和本地仓库</h1><h2 id="远程仓库—-—Gitcafe托管"><a href="#远程仓库—-—Gitcafe托管" class="headerlink" title="远程仓库— —Gitcafe托管"></a>远程仓库— —Gitcafe托管</h2><p>由于GitHub服务器在国外，因此，访问速度比较慢，gitcafe的服务器在天朝，在国内访问速度很快。<br>注册的时候，用户名最好用比较个性一点的，如果你以后不申请域名的话，你的用户名就是你的博客的访问地址（我第一次就是用一大串数字，一看就是垃圾网站，无奈，后来又改了）。<br>注册好后，创建“公开项目”，如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/创建公开项目.png" alt=""><br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/创建公开项目2.png" alt=""></p>
+<h2 id="本地仓库—-—创建本地仓库"><a href="#本地仓库—-—创建本地仓库" class="headerlink" title="本地仓库— —创建本地仓库"></a>本地仓库— —创建本地仓库</h2><p>首先，在你的硬盘下新建文件夹，作为你的本地仓库（文件夹名字作为你的仓库名字），然后，进入文件夹，点击右键选择“Git Bash”，输入一下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+<p>然后，就是漫长的等待…，这个过程是从GitHub服务器上下载工程代码到本地，项目创建好后，如下界面所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/创建本地hexo项目.png" alt=""><br>好啦，新建hexo项目中有个简单的工程实例，你可以在本地进行编译看看效果了。</p>
+<figure class="highlight plain"><figcaption><span>[生成]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
+<p>如下提示信息，说明生成成功，在你的本地仓库中会生成一个名叫“public”的文件夹如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/hexo g.png" alt=""><br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/public.png" alt=""><br>然后，在本地4000端口运行：</p>
+<figure class="highlight plain"><figcaption><span>[编译]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure>
+<p>如果4000无法访问，就用3600或其他端口访问：</p>
+<figure class="highlight plain"><figcaption><span>[编译]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -p 3600</div></pre></td></tr></table></figure>
+<p>在浏览器中输入“<em><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></em>”或“<em><a href="http://localhost:3600/" target="_blank" rel="external">http://localhost:3600/</a></em>”，结果如下所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/结果.png" alt=""><br>目前只能在本地访问，如果远程访问，需要在gitcafe上部署。</p>
+<h1 id="创建ssh文件"><a href="#创建ssh文件" class="headerlink" title="创建ssh文件"></a>创建ssh文件</h1><p>本地仓库和远程仓库之间通信，安全性是最重要的，因此，需要创建一个ssh秘钥。<br>在桌面上点击鼠标右键，选择“git Bash”，输入一下命令：</p>
+<figure class="highlight plain"><figcaption><span>[配置全局name和email]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;zhaofuqiang&quot;</div><div class="line">git config --global user.email &quot;740695564@qq.com&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[生成key]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;740695564@qq.com&quot;</div></pre></td></tr></table></figure>
+<p>然后，一直按回车即可，如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/ssh2.png" alt=""><br>然后在以下目录下生成id_rsa和id_rsa.pub，如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/ssh1.png" alt=""></p>
+<p>然后，用记事本打开id_rsa.pub文件，复制里面内容添加到gitcafe的ssh中，如下图所示：<br><img src="/2017/06/12/Hexo之环境搭建/images/仓库创建/ssh3.png" alt=""><br>然后，打开工程文件下的“_config.yml”，拖到最下面，做一下修改：</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Zhao Fuqiang" />
+          <p class="site-author-name" itemprop="name">Zhao Fuqiang</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么用hexo写博客"><span class="nav-number">1.</span> <span class="nav-text">为什么用hexo写博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软件安装"><span class="nav-number">2.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件下载"><span class="nav-number">2.1.</span> <span class="nav-text">软件下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git安装"><span class="nav-number">2.2.</span> <span class="nav-text">git安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node-js安装"><span class="nav-number">2.3.</span> <span class="nav-text">node.js安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo安装"><span class="nav-number">2.4.</span> <span class="nav-text">hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MarkdownPad2安装"><span class="nav-number">2.5.</span> <span class="nav-text">MarkdownPad2安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建远程和本地仓库"><span class="nav-number">3.</span> <span class="nav-text">创建远程和本地仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库—-—Gitcafe托管"><span class="nav-number">3.1.</span> <span class="nav-text">远程仓库— —Gitcafe托管</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地仓库—-—创建本地仓库"><span class="nav-number">3.2.</span> <span class="nav-text">本地仓库— —创建本地仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建ssh文件"><span class="nav-number">4.</span> <span class="nav-text">创建ssh文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhao Fuqiang</span>
+</div>
+
+<!—
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+—>
+
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
